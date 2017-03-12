@@ -14,6 +14,11 @@ def sum_r(x)
   return x.shift + sum_r(x)
 end
 
+def sum_r x
+  return 0 if x.empty?
+  x.first + sum_r(x.drop 1)
+end
+
 test: 
 describe "sum_r" do
   it "should add values in a given list" do
