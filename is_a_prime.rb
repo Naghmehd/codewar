@@ -21,6 +21,16 @@ def is_prime(num)
   true
 end
 
+# solution2
+def isPrime(num)
+  return false if num < 2
+
+  (2...num).each { |i|
+    return false if num % i == 0
+  }  
+  return true
+end
+
 # Example Tests:
 #
 # Test.assert_equals(isPrime(2), true)
