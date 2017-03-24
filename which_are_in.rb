@@ -41,7 +41,10 @@ def in_array(array1, array2)
       str if array2.any?{ |str2| str2.match(str) }
     end.compact
 end
-
+# solution2
+def in_array(array1, array2)
+  array1.select{|s| array2.any?{|w| w.include?(s) } }.sort
+end
 # Example Tests:
 #
 # a1 = ["arp", "live", "strong"]
