@@ -27,10 +27,15 @@ def isPrime(num)
 
   (2...num).each { |i|
     return false if num % i == 0
-  }  
+  }
   return true
 end
 
+# solution3
+def isPrime(num)
+    require "prime"
+    return num.prime?
+end
 # Example Tests:
 #
 # Test.assert_equals(isPrime(2), true)
