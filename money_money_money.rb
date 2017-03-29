@@ -40,3 +40,14 @@ def calculate_years(principal, interest, tax, desired)
 
   years
 end
+
+# Popular solution2
+def calculate_years(principal, interest, tax, desired)
+  year = 0
+  while principal < desired
+    year += 1
+    income = principal * interest
+    principal += income - income * tax
+  end
+  year
+end
