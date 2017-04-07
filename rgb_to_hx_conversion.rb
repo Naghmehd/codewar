@@ -13,8 +13,8 @@ def rgb(r, g, b)
 end
 
 def to_hex(n)
-  n = 255 if colour > 255
-  n = 0 if colour < 0
+  n = 255 if n > 255
+  n = 0 if n < 0
   n.to_s(16).ljust(2, '0').upcase
 end
 
